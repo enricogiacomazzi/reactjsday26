@@ -7,8 +7,6 @@ npm install
 npm run dev
 ```
 
-Open `http://localhost:5173/?log` to see every host config call next to the canvas.
-
 ## Elements
 
 | Element | Props |
@@ -31,7 +29,6 @@ Children are positioned relative to their parent. Clicks bubble from the topmost
 | 8 · Priorities + React 19 stubs | `src/renderer/hostConfig.js`, `src/renderer/events.js` |
 | 9 · Reconciler + root | `src/renderer/index.js` |
 | Events (hit-testing) | `src/renderer/events.js` |
-| Host config logging | `src/renderer/logger.js` |
 | Demo app | `src/App.jsx` |
 
 ## Versions
