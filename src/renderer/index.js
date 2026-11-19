@@ -1,7 +1,6 @@
 import Reconciler from 'react-reconciler'
 import { ConcurrentRoot } from 'react-reconciler/constants'
 import { hostConfig } from './hostConfig.js'
-import { withLogging } from './logger.js'
 import { attachEvents } from './events.js'
 
 // ─── Step 9 · Wire it up: reconciler + root ──────────────────────────────────
@@ -11,8 +10,7 @@ export function onHostCall(listener) {
   log = listener
 }
 
-const logging = new URLSearchParams(location.search).has('log')
-const config = logging ? withLogging(hostConfig, (line) => log?.(line)) : hostConfig
+const config = hostConfig;
 
 const reconciler = Reconciler(config)
 
